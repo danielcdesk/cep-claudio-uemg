@@ -2,6 +2,9 @@
 
 Landing page acadêmica para pesquisar os logradouros e CEPs retornados pela API ViaCEP nas consultas de Rua, Avenida e Praça para Cláudio (MG). O projeto usa HTML5 semântico, CSS3 e JavaScript puro, sem frameworks ou bibliotecas.
 
+**Página publicada:** https://danielcdesk.github.io/cep-claudio-uemg/  
+**Repositório:** https://github.com/danielcdesk/cep-claudio-uemg
+
 ## Como funciona
 
 1. A pasta `data/` contém as três respostas da API consolidadas em `ceps.json`.
@@ -55,12 +58,9 @@ python -m http.server 8000
 
 Depois, acesse `http://localhost:8000`.
 
-## Publicar no GitHub Pages
+## Publicação no GitHub Pages
 
-1. Envie os arquivos deste projeto para a raiz de um repositório público.
-2. No GitHub, abra **Settings → Pages**.
-3. Escolha **Deploy from a branch**, branch `main` e pasta `/ (root)`.
-4. Abra o endereço publicado e confira se a página e `data/ceps.json` carregam.
+O projeto está configurado para ser servido pela raiz do repositório na branch `main`. Confira a página publicada e confirme que `data/ceps.json` carrega junto com a interface.
 
 Os caminhos para CSS, JavaScript, imagens e JSON são relativos, inclusive para publicação em endereço de projeto do GitHub Pages.
 
@@ -81,4 +81,3 @@ O projeto foi desenvolvido como atividade prática do curso de Bacharelado em Si
 ## Divulgação
 
 Um rascunho para a publicação técnica no LinkedIn está em [`docs/linkedin-post.md`](docs/linkedin-post.md). Complete os links e anexe uma demonstração visual antes de publicar. A equipe deve marcar os integrantes na própria publicação.
-

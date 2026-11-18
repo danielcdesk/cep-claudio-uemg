@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2f0e9">
+  <meta name="description" content="Consulte logradouros e CEPs de Cláudio, Minas Gerais, em uma página acadêmica da UEMG Carangola.">
+  <title>CEP Cláudio — consulta de logradouros</title>
+  <link rel="icon" href="./assets/logo-uemg-carangola.png" type="image/png">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" id="inicio">
+    <div class="header-inner">
+      <a class="brand" href="#inicio" aria-label="CEP Cláudio, início">
+        <img class="brand-logo" src="./assets/logo-sistemas-uemg-carangola.png" alt="">
+        <span class="brand-copy">
+          <strong>CEP <span>Cláudio</span></strong>
+          <small>Sistemas de Informação · UEMG</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="#consulta">Consultar CEP</a>
+        <button class="nav-about" type="button" data-open-dialog="sobre">Sobre o projeto <span aria-hidden="true">↗</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-rule" aria-hidden="true"></span> CLÁUDIO · MINAS GERAIS</p>
+        <h1 id="hero-title">Encontre o CEP<br>do seu <em>endereço.</em></h1>
+        <p class="hero-intro">Pesquise os logradouros retornados pelo ViaCEP para Cláudio. Escolha uma sugestão para conferir o bairro e o código postal.</p>
+
+        <form class="search-form" id="search-form" role="search" autocomplete="off">
+          <label for="logradouro">Nome da rua, avenida ou praça</label>
+          <div class="search-wrap">
+            <div class="search-control">
+              <svg class="search-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                <circle cx="10.8" cy="10.8" r="6.6"></circle>
+                <path d="m16 16 4.5 4.5"></path>
+              </svg>
+              <input id="logradouro" name="logradouro" type="search" placeholder="Ex.: Rua Pará" aria-autocomplete="list" aria-controls="suggestions" aria-expanded="false" aria-activedescendant="" spellcheck="false">
+              <button class="search-submit" type="submit" aria-label="Ver resultados">
+                <span>Buscar</span>
+                <svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M3.5 10h12m-5-5 5 5-5 5"></path></svg>
+              </button>
+            </div>
+            <p class="search-hint" id="search-hint">Digite 3 ou mais letras para receber sugestões.</p>
+            <ul class="suggestions" id="suggestions" role="listbox" aria-label="Sugestões de logradouros" hidden></ul>
+          </div>
+        </form>
+
+        <div class="quick-search" aria-label="Pesquisas rápidas">
+          <span>Tente</span>
+          <button type="button" data-search-term="pará">Pará</button>
+          <button type="button" data-search-term="sergipe">Sergipe</button>
+          <button type="button" data-search-term="tancredo">Tancredo Neves</button>
+        </div>
+      </div>
+
+      <figure class="hero-photo">
+        <img src="./assets/claudio-praca.jpg" alt="Praça principal de Cláudio, com igreja, torre do relógio e palmeiras" fetchpriority="high">
+        <div class="photo-wash" aria-hidden="true"></div>
+        <figcaption>
+          <span>Praça principal</span>
+          <a href="https://commons.wikimedia.org/wiki/File:Pra%C3%A7a_principal_de_Cl%C3%A1udio_-_MG_-_panoramio.jpg" target="_blank" rel="noopener noreferrer">Foto: Bruno Carvalho Leal · Wikimedia Commons</a>
+        </figcaption>
+        <span class="photo-location">Cláudio <span>·</span> MG</span>
+      </figure>
+    </section>
+
+    <section class="lookup" id="consulta" aria-labelledby="lookup-title">
+      <div class="lookup-heading">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-rule" aria-hidden="true"></span> CONSULTA LOCAL</p>
+          <h2 id="lookup-title">Endereços encontrados</h2>
+        </div>
+        <p class="lookup-count" id="result-count" aria-live="polite">Carregando a base…</p>
+      </div>
+
+      <p class="sr-only" id="suggestion-status" aria-live="polite"></p>
+      <div class="result-area" id="results" aria-live="polite" aria-relevant="additions text"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <span class="empty-mark" aria-hidden="true">⌕</span>
+        <h3 id="empty-title">Nenhum endereço selecionado</h3>
+        <p id="empty-message">Digite pelo menos três letras para começar sua busca.</p>
+      </div>
+      <p class="data-note" id="data-note"></p>
+    </section>
+
+    <section class="project-note" aria-label="Informações do projeto">
+      <span class="project-note-mark" aria-hidden="true">C.</span>
+      <div>
+        <p class="eyebrow">UM PROJETO ACADÊMICO</p>
+        <p>Desenvolvido no curso de <strong>Sistemas de Informação</strong><br>UEMG · Unidade Acadêmica de Carangola</p>
+      </div>
+      <button type="button" class="text-arrow" data-open-dialog="sobre">Conheça o projeto <span aria-hidden="true">↗</span></button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a class="footer-uemg" href="https://www.uemg.br/carangola" target="_blank" rel="noopener noreferrer" aria-label="UEMG Carangola — abre em nova aba">
+        <img src="./assets/logo-uemg-carangola.png" alt="UEMG Carangola">
+      </a>
+      <p class="footer-copy">© 2026 · Consulta acadêmica de CEPs<br><span>Cláudio, Minas Gerais</span></p>
+      <img class="footer-course" src="./assets/logo-sistemas-uemg-carangola.png" alt="Sistemas de Informação · UEMG Carangola">
+      <nav class="footer-nav" aria-label="Informações legais">
+        <button type="button" data-open-dialog="sobre">Sobre</button>
+        <button type="button" data-open-dialog="termos">Termos de uso</button>
+        <button type="button" data-open-dialog="privacidade">Privacidade</button>
+      </nav>
+    </div>
+  </footer>
+
+  <dialog class="info-dialog" id="dialog-sobre" aria-labelledby="dialog-sobre-title">
+    <div class="dialog-header">
+      <span class="dialog-monogram" aria-hidden="true">C.</span>
+      <button class="dialog-close" type="button" data-close-dialog aria-label="Fechar janela">×</button>
+    </div>
+    <p class="eyebrow">UEMG · CARANGOLA</p>
+    <h2 id="dialog-sobre-title">Sobre o projeto</h2>
+    <div class="dialog-content">
+      <p>Esta página é uma atividade prática do curso de Bacharelado em Sistemas de Informação da Universidade do Estado de Minas Gerais, Unidade Acadêmica de Carangola. O projeto exercita HTML semântico, CSS, JavaScript e o consumo local de dados abertos.</p>
+      <h3>Equipe de desenvolvimento</h3>
+      <ul class="people-list">
+        <li><a href="https://www.linkedin.com/in/daniel-cirilo-691707435/" target="_blank" rel="noopener noreferrer">Daniel Cirilo de Souza <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://www.linkedin.com/in/robertt-avelino-a27813435/" target="_blank" rel="noopener noreferrer">Robertt Avelino da Silva <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://www.linkedin.com/in/emanuel-santos-cunha-251713435/" target="_blank" rel="noopener noreferrer">Emanuel Santos Cunha <span aria-hidden="true">↗</span></a></li>
+      </ul>
+      <h3>Transparência sobre o uso de IA</h3>
+      <p>Ferramentas de inteligência artificial generativa foram utilizadas como apoio na organização e elaboração desta versão do projeto. A equipe deve revisar, compreender e validar o código e o conteúdo antes da apresentação.</p>
+    </div>
+    <button class="dialog-done" type="button" data-close-dialog>Fechar</button>
+  </dialog>
+
+  <dialog class="info-dialog" id="dialog-termos" aria-labelledby="dialog-termos-title">
+    <div class="dialog-header">
+      <span class="dialog-monogram" aria-hidden="true">C.</span>
+      <button class="dialog-close" type="button" data-close-dialog aria-label="Fechar janela">×</button>
+    </div>
+    <p class="eyebrow">INFORMAÇÃO AO VISITANTE</p>
+    <h2 id="dialog-termos-title">Termos de uso</h2>
+    <div class="dialog-content">
+      <h3>Finalidade acadêmica</h3>
+      <p>Esta aplicação possui finalidade didática e informativa, vinculada às atividades do curso de Sistemas de Informação da UEMG Carangola.</p>
+      <h3>Origem e atualização dos dados</h3>
+      <p>Os registros foram obtidos pelas consultas à API pública ViaCEP para Rua, Avenida e Praça em Cláudio (MG), em 18 de novembro de 2026. A página apresenta uma cópia local dos resultados e não consulta o cadastro dos Correios em tempo real.</p>
+      <h3>Uso das informações</h3>
+      <p>Os dados são exibidos para consulta. A equipe não garante que correspondam à situação cadastral mais recente e não se responsabiliza por divergências, indisponibilidade ou uso comercial indevido. Confirme informações importantes diretamente nos canais oficiais dos Correios.</p>
+    </div>
+    <button class="dialog-done" type="button" data-close-dialog>Fechar</button>
+  </dialog>
+
+  <dialog class="info-dialog" id="dialog-privacidade" aria-labelledby="dialog-privacidade-title">
+    <div class="dialog-header">
+      <span class="dialog-monogram" aria-hidden="true">C.</span>
+      <button class="dialog-close" type="button" data-close-dialog aria-label="Fechar janela">×</button>
+    </div>
+    <p class="eyebrow">INFORMAÇÃO AO VISITANTE</p>
+    <h2 id="dialog-privacidade-title">Privacidade</h2>
+    <div class="dialog-content">
+      <h3>Busca no navegador</h3>
+      <p>O texto digitado é comparado localmente, no navegador, aos registros do arquivo JSON. O projeto não inclui ferramentas próprias de análise, rastreamento, pixels ou cookies de publicidade.</p>
+      <h3>Dados pessoais</h3>
+      <p>A página não solicita nem armazena dados pessoais. O provedor de hospedagem pode processar registros técnicos de acesso conforme suas próprias políticas.</p>
+      <h3>Área de transferência</h3>
+      <p>O CEP só é enviado à área de transferência quando a pessoa aciona o botão “Copiar”.</p>
+    </div>
+    <button class="dialog-done" type="button" data-close-dialog>Fechar</button>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

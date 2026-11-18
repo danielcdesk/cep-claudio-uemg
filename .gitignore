@@ -1,0 +1,6 @@
+# Arquivos locais do ambiente de trabalho
+Thumbs.db
+.DS_Store
+
+# Documentos de planejamento internos do assistente
+docs/superpowers/

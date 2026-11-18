@@ -1,0 +1,112 @@
+{
+  "cidade": "Cláudio",
+  "uf": "MG",
+  "fonte": "ViaCEP",
+  "dataConsulta": "2026-11-18",
+  "totalRetornosApi": 7,
+  "totalRegistrosUnicos": 7,
+  "totalLogradourosComNome": 6,
+  "consultas": [
+    {
+      "categoria": "Rua",
+      "endpoint": "https://viacep.com.br/ws/MG/Cl%C3%A1udio/Rua/json/",
+      "registrosRetornados": 4
+    },
+    {
+      "categoria": "Avenida",
+      "endpoint": "https://viacep.com.br/ws/MG/Cl%C3%A1udio/Avenida/json/",
+      "registrosRetornados": 2
+    },
+    {
+      "categoria": "Praça",
+      "endpoint": "https://viacep.com.br/ws/MG/Cl%C3%A1udio/Praca/json/",
+      "registrosRetornados": 1
+    }
+  ],
+  "registros": [
+    {
+      "logradouro": "Rua Pará",
+      "bairro": "Centro",
+      "localidade": "Cláudio",
+      "uf": "MG",
+      "cep": "35530-970",
+      "complemento": "23 Loja 01",
+      "categoriasConsulta": [
+        "Rua"
+      ],
+      "fonte": "ViaCEP"
+    },
+    {
+      "logradouro": "Rua Pará",
+      "bairro": "Centro",
+      "localidade": "Cláudio",
+      "uf": "MG",
+      "cep": "35530-959",
+      "complemento": "23 Loja 1",
+      "categoriasConsulta": [
+        "Rua"
+      ],
+      "fonte": "ViaCEP"
+    },
+    {
+      "logradouro": "Rua Sergipe",
+      "bairro": "Centro",
+      "localidade": "Cláudio",
+      "uf": "MG",
+      "cep": "35530-971",
+      "complemento": "144",
+      "categoriasConsulta": [
+        "Rua"
+      ],
+      "fonte": "ViaCEP"
+    },
+    {
+      "logradouro": "Rua Gabriel Passos",
+      "bairro": "Monsenhor João Alexandre",
+      "localidade": "Cláudio",
+      "uf": "MG",
+      "cep": "35532-971",
+      "complemento": "245",
+      "categoriasConsulta": [
+        "Rua"
+      ],
+      "fonte": "ViaCEP"
+    },
+    {
+      "logradouro": "Avenida Presidente Tancredo Neves",
+      "bairro": "Centro",
+      "localidade": "Cláudio",
+      "uf": "MG",
+      "cep": "35530-972",
+      "complemento": "564 Loja",
+      "categoriasConsulta": [
+        "Avenida"
+      ],
+      "fonte": "ViaCEP"
+    },
+    {
+      "logradouro": "Avenida Presidente Tancredo Neves",
+      "bairro": "Bocaina",
+      "localidade": "Cláudio",
+      "uf": "MG",
+      "cep": "35530-973",
+      "complemento": "s/n",
+      "categoriasConsulta": [
+        "Avenida"
+      ],
+      "fonte": "ViaCEP"
+    },
+    {
+      "logradouro": "",
+      "bairro": "",
+      "localidade": "Cláudio",
+      "uf": "MG",
+      "cep": "35530-000",
+      "complemento": "",
+      "categoriasConsulta": [
+        "Praça"
+      ],
+      "fonte": "ViaCEP"
+    }
+  ]
+}
